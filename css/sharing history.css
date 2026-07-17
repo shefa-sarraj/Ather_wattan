@@ -1,0 +1,517 @@
+:root{
+    --primary-red:#b1151c;
+    --primary-black: #000000;
+    --primary-brown:#452714;
+    --font-bold:60px;
+    --font-medium:48px;
+    --font-regular:37px;
+    --font-small:24px;
+}
+html {
+    font-size: 16px;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Lyon';
+    src: url('./fonts//lyon-arabic-display-regular.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;    
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Lyon';
+    src: url('./fonts//lyon-arabic-display-medium.otf') format('opentype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Lyon';
+    src: url('./fonts//lyon-arabic-display-bold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* Black */
+@font-face {
+    font-family: 'Lyon';
+    src: url('./fonts//lyon-arabic-display-black.otf') format('opentype');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Lyon';
+    src: url('./fonts//lyon-arabic-display-light.otf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Lyon', sans-serif;
+    color: var(--primary-black);
+    line-height: 1.6;
+    
+    /* لجعل الصورة تغطي كامل الشاشة */
+    background-size: cover; 
+
+    /* لمنع تكرار الصورة إذا كانت صغيرة */
+    background-repeat: no-repeat; 
+    
+    /* لضمان أن الخلفية تغطي كامل طول الصفحة */
+    min-height: 100vh;
+    background-color: #eeeadf;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 24px auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f7;
+    border-radius:8px;
+}
+
+.logo img {
+    height:65px;
+    width:90px;
+}
+.menu{
+    display: none !important;
+}
+
+.navbarr ul {
+    display: flex;
+    list-style: none;
+    gap: 120px;
+    font-family: 'Lyon', sans-serif;    
+    font-weight: 500;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.navbarr ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Lyon', sans-serif;
+    font-weight: 500;
+}
+
+/* header nav ul li a.active {
+    color: #b02323;
+} */
+
+.btn-contact {
+    background-color:#b1151c;
+    color: white;
+    font-family: 'Lyon', sans-serif;    
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    width:208PX;
+    height: 55PX;
+    border-radius:8px;
+    text-decoration: none;
+    display: flex;          /* تحويل الزر لبيئة فليكس */
+    justify-content: center; /* توازنه أفقياً */
+    align-items: center;     /* توازنه عمودياً */
+}
+.btn-contact:hover {
+    transform: translateY(-8px);
+}
+
+.navbarr ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Lyon', sans-serif;
+    font-weight: 500;
+}
+
+/* header nav ul li a.active {
+    color: #b02323;
+} */
+.bnavbarr ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; 
+    font-weight: 500;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: #B1151C54;
+    margin: 60px 240px;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 80px;
+}
+
+.bnavbarr ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn-contact {
+    background-color:#b1151c;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    width:208PX;
+    height: 55PX;
+    border-radius:8px;
+    text-decoration: none;
+    display: flex;          /* تحويل الزر لبيئة فليكس */
+    justify-content: center; /* توازنه أفقياً */
+    align-items: center;     /* توازنه عمودياً */
+}
+.btn-contact:hover {
+    transform: translateY(-8px);
+}
+.main-wrapper {
+    display: flex;
+    justify-content: center; /* التوسط الأفقي */
+    align-items: center;     /* التوسط العمودي */
+    width: 100%;             /* تأكد أنها تأخذ كامل عرض الصفحة */
+    min-height: 100vh;       /* لتوسيطه في منتصف طول الشاشة */
+    direction: rtl;
+    overflow: hidden;  
+    text-align: center;      /* لمنع ظهور شريط التمرير إذا كان البوكس كبيراً */
+}
+.top-header{
+    color: var(--primary-black);
+    font-size: 48px;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+.heritage-card {
+    /* المقاسات المطلوبة */
+    width: 100%;
+    max-width: 1121px; 
+    height: 912px;
+    
+    /* التوسط داخل الصفحة */
+    margin: 40px auto; 
+    
+    /* توزيع المساحة الداخلية */
+    padding: 150px 80px; 
+    
+    /* التأكد من أن الـ Padding لا يزيد من حجم الصندوق */
+    box-sizing: border-box; 
+
+    /* بقية التنسيقات */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* لتوزيع النص في المنتصف والشعار في الأسفل */
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow:10px 10px 25px rgba(185, 170, 140, .89);    
+}
+
+.heritage-card::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url("images/bg.jpeg"); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; 
+    z-index: -1; 
+    
+}
+.hero-title{
+    font-family: 'lyon-arabic-display-bold';
+    font-size: clamp(2.5rem, 8vw, 60px);
+    line-height: 1.8;
+    color: var(--primary-black);
+    margin-top: 0;
+    margin-bottom: 30px;
+    flex-direction: row-reverse;
+}
+.main-paragraph b{
+    font-family: 'lyon-arabic-display-regular';
+    font-size: clamp(2rem, 7vw, 48px);
+    line-height: 2;
+    color: var(--primary-brown);
+    margin-bottom: 32px;
+}
+.sub-message{
+    font-size: var(--font-regular);
+    color: var(--primary-black);
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.highlight-red{
+    color: var(--primary-red);
+}
+.btn-explore{
+    background-color: var(--primary-red);
+    color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s , background 0.3s;
+}
+.btn-explore:hover{
+    background-color: #8e1116;
+    transform: scale(1.05);
+}
+.card-footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+.stitch-info {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 24px);
+    color: var(--primary-black);
+    line-height: 1.8;
+    padding: 12px 27px; /* زيادة التباعد الداخلي */
+    background-color: rgba(210, 193, 176, 1); /* خلفية خفيفة مثل Figma */
+    border-radius: 8px; 
+    border-right: 5px solid var(--primary-brown); 
+    position: absolute; 
+    bottom: 180px;
+    left: 50px;
+    z-index: 2;
+}
+.footer-logo {
+    width: 473px; 
+    height: 354px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 55px;
+    right: 45px;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 10px 10px 25px rgba(177, 131, 65, 0.7);
+}
+/* Footer */
+footer {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* لترتيب الصفوف تحت بعض */
+    align-items: center;    /* لتوسيط كل شيء في منتصف الصفحة */
+    padding: 40px 0;
+    gap: 12px;             /* مسافة بين الصف العلوي وصف الحقوق */
+}
+.footer-top{
+    display: flex;
+    align-items: center;    /* محاذاة اللوجو مع الكلام عمودياً */
+    justify-content: center;/* توسيطهم في نص الصفحة */
+    gap: 80px;             /* المسافة بين اللوجو والقائمة */
+    flex-wrap: wrap;        /* لضمان التجاوب مع الشاشات الصغيرة */
+}
+
+.social-links {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+footer p {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+    .menu {
+        display: none !important; /* أضيفي !important مؤقتاً للتأكد من عدم وجود تداخل */
+   }
+
+    .navbarr ul{
+        gap:60px;
+        font-size:1.3rem;
+    }
+
+    .btn-contact{
+        width:160px;
+        height:50px;
+        font-size:1.2rem;
+    }
+
+    /* العنوان */
+    h1{
+        font-size: 2rem;
+        margin: 30px 0 50px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    header{ 
+        flex-direction: row; 
+        gap: 20px; 
+    } 
+    .main-wrapper{ 
+        min-height: auto; 
+    } .heritage-card{ 
+        padding: 60px 25px 320px; 
+        min-height: auto; 
+    } 
+
+    .footer-top {
+        gap: 50px;
+    }
+    
+    footer p,
+    .social-links {
+        font-size: 1.2rem;
+    }
+}
+    /* تصحيح القائمة للأجهزة المحمولة */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        display: block !important;
+    }
+
+    /* إخفاء القائمة افتراضياً */
+    .navbarr {
+        display: none !important;
+        position: absolute;
+        top: 70px;
+        left: 15px;
+        right: 15px;
+        background: rgb(255, 207, 207);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        z-index: 999;
+    }
+
+    /* إظهار القائمة عند إضافة الكلاس show */
+    .navbarr.show {
+        display: block !important;
+    }
+
+    .navbarr ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn-contact {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+   header .menu button{
+        background-color: #b1151c;
+        color: #ffffff;
+        border: 0;
+        padding: 5px 10px;
+        
+   }
+
+   
+    
+    .btn-contact{
+        width:50%;
+        height:45px;
+        font-size:1rem;
+    }
+
+    .hero{
+        height:300px;
+        margin:40px 0;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .card img{
+        height:180px;
+    }
+
+    .section-heading h2{
+        font-size:1.5rem;
+    }
+
+    .section-heading p{
+        font-size:1.2rem;
+    }
+.heritage-card {
+        height: auto; 
+        padding: 40px 20px; 
+    }
+
+    .card-footer {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+        margin-top: 30px; 
+        position: relative;
+    }
+
+    .footer-logo {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        max-width: 320px; 
+        height: auto; 
+        margin-bottom: 20px; 
+        order: 1 !important; 
+    }
+
+    .stitch-info {
+        position: relative; 
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        max-width: 280px;
+        border-right: none;
+        border-top: 4px solid var(--primary-brown); 
+        order: 2 !important; 
+    }
+    .footer-top{
+        flex-direction:column;
+        gap:30px;
+    }
+}
+.card-content {
+    padding: 20px;
+}
+
+.contribution-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}

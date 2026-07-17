@@ -1,0 +1,453 @@
+html {
+    font-size: 16px;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Lyon';
+    src: url('../font/arfonts-lyon-arabic-display_all/lyon-arabic-display-regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Lyon';
+    src: url('../font/arfonts-lyon-arabic-display_all/lyon-arabic-display-medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Lyon';
+    src: url('../font/arfonts-lyon-arabic-display_all/lyon-arabic-display-bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+/* Black */
+@font-face {
+    font-family: 'Lyon';
+    src: url('../font/arfonts-lyon-arabic-display_all/lyon-arabic-display-black.otf') format('opentype');
+    font-weight: 900;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Lyon';
+    src: url('../font/arfonts-lyon-arabic-display_all/lyon-arabic-display-light.otf') format('opentype');
+    font-weight: 300;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lyon', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    /* استبدلي path/to/your/image.jpg بمسار الصورة الحقيقي */
+    background-color: #eeeadf;
+    
+    /* لجعل الصورة تغطي كامل الشاشة */
+    background-size: cover; 
+
+    /* لمنع تكرار الصورة إذا كانت صغيرة */
+    background-repeat: no-repeat; 
+    
+    /* لضمان أن الخلفية تغطي كامل طول الصفحة */
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 24px auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f7;
+    border-radius:8px;
+}
+
+.logo img {
+    height:65px;
+    width:90px;
+}
+
+.navbarr ul {
+    display: flex;
+    list-style: none;
+    gap: 120px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.navbarr ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* header nav ul li a.active {
+    color: #b02323;
+} */
+
+.btn-contact {
+    background-color:#b1151c;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    width:208PX;
+    height: 55PX;
+    border-radius:8px;
+    text-decoration: none;
+    display: flex;          /* تحويل الزر لبيئة فليكس */
+    justify-content: center; /* توازنه أفقياً */
+    align-items: center;     /* توازنه عمودياً */
+}
+.btn-contact:hover {
+    transform: translateY(-8px);
+}
+
+
+
+
+
+
+
+.bnavbarr ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; 
+    font-weight: 500;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: #B1151C54;
+    margin: 60px 240px;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 80px;
+}
+
+.bnavbarr ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+h1{
+    margin-bottom: 80PX;
+    text-align: center;
+}
+
+/* النص المخفي يكون مخفياً في البداية */
+
+.card .story-container {
+  padding: 10px 0; /* إلغاء الهوامش الكبيرة لتناسب داخل البطاقة */
+  direction: rtl;
+}
+.card h2 {
+  font-size: 1.2rem; /* تصغير العنوان ليناسب حجم البطاقة */
+  margin-bottom: 8px;
+}
+
+
+.more-text {
+  display: none;
+}
+
+/* يجب أن تكون متصلة هكذا لتعني: العنصر الذي يمتلك الكلاسين معاً */
+.more-text.show {
+  display: inline;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* تنسيق الزر */
+.toggle-btn {
+  display: inline;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+
+
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    gap: 100px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.card:hover {
+    transform: translateY(-16px);
+}
+
+.card img {
+    width:100%;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+
+.card h3 {
+    font-weight: 700;
+}
+
+
+
+.card p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 20px;
+    height: 80px; /* لتوحيد الارتفاع */
+    overflow: hidden;
+}
+
+.btn-card {
+    display: block;
+    background-color: #b02323;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* لترتيب الصفوف تحت بعض */
+    align-items: center;    /* لتوسيط كل شيء في منتصف الصفحة */
+    padding: 40px 0;
+    gap: 12px;             /* مسافة بين الصف العلوي وصف الحقوق */
+}
+.footer-top{
+    display: flex;
+    align-items: center;    /* محاذاة اللوجو مع الكلام عمودياً */
+    justify-content: center;/* توسيطهم في نص الصفحة */
+    gap: 80px;             /* المسافة بين اللوجو والقائمة */
+    flex-wrap: wrap;        /* لضمان التجاوب مع الشاشات الصغيرة */
+}
+
+.social-links a i {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.5rem;;
+}
+footer p {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+
+.menu {
+    display: none;
+}
+/* =========================
+   Tablet Responsive
+========================= */
+/* ===== Responsive لأجهزة التابليت (768px - 991px) ===== */
+/* ===== Responsive لأجهزة التابليت (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 1000px) {
+
+    .menu {
+        display: none !important; /* أضيفي !important مؤقتاً للتأكد من عدم وجود تداخل */
+   }
+
+    .navbarr ul{
+        gap:60px;
+        font-size:1.3rem;
+    }
+
+    .btn-contact{
+        width:160px;
+        height:50px;
+        font-size:1.2rem;
+    }
+
+.bnavbarr ul {
+        margin: 25px 40px;
+        padding: 16px;
+
+        gap: 80px;
+        font-size: 1.5rem;
+
+        flex-wrap: wrap;
+    }
+
+    /* العنوان */
+    h1{
+        font-size: 2rem;
+        margin: 30px 0 50px;
+    }
+
+    /* الكاردات */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card img{
+        height: 180px;
+    }
+
+    .card p{
+        height: auto;
+        font-size: 1rem;
+    }
+}
+    /* تصحيح القائمة للأجهزة المحمولة */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        display: block !important;
+    }
+
+    /* إخفاء القائمة افتراضياً */
+    .navbarr {
+        display: none !important;
+        position: absolute;
+        top: 70px;
+        left: 15px;
+        right: 15px;
+        background: rgb(255, 207, 207);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        z-index: 999;
+    }
+
+    /* إظهار القائمة عند إضافة الكلاس show */
+    .navbarr.show {
+        display: block !important;
+    }
+
+    .navbarr ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn-contact {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+   header .menu button{
+        background-color: #b1151c;
+        color: #ffffff;
+        border: 0;
+        padding: 5px 10px;
+        
+   }
+
+   
+    
+    .btn-contact{
+        width:50%;
+        height:45px;
+        font-size:1rem;
+    }
+
+
+
+
+
+    .bnavbarr ul {
+        margin: 25px 40px;
+        padding: 8px;
+
+        gap: 20px;
+        font-size: 1rem;
+
+        flex-wrap: wrap;
+    }
+
+    
+
+    /* العنوان */
+    h1{
+        font-size: 1.5rem;
+        margin: 20px 0 40px;
+        line-height: 1.5;
+    }
+
+    /* الكاردات */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card img{
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card h3{
+        font-size: 1.2rem;
+    }
+
+    .card p{
+        font-size: 0.95rem;
+        line-height: 1.8;
+        height: auto;
+    }
+
+    .btn-card{
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+
+    .more-text {
+    display: none;
+}
+
+.more-text.show {
+    display: inline;
+}
+
+}
