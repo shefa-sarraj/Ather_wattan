@@ -1,17 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "palestine_heritage";
+$servername = "blaxdyjfxqxgu2ivmnip-mysql.services.clever-cloud.com";
+$username = "uset8nkvjyvcnqm2";
+$password = "NMQPAAlrgBNtQmMewFUN"; 
+$dbname = "blaxdyjfxqxgu2ivmnip";
 
-// إنشاء الاتصال مع كتم الأخطاء مؤقتاً باستخدام علامة @
-$conn = @new mysqli($servername, $username, $password, $dbname);
+// إنشاء الاتصال السحابي الحقيقي
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// التحقق من الاتصال دون التسبب في انهيار السيرفر (Bypass die)
+// التحقق من الاتصال
 if ($conn->connect_error) {
-    // تركنا الكود فارغاً هنا مؤقتاً ليسمح للواجهة بالظهور ولا يوقف السيرفر
-} else {
-    // لدعم اللغة العربية في حال نجاح الاتصال مستقبلاً
-    $conn->set_charset("utf8");
+    die("فشل الاتصال بقاعدة البيانات السحابية: " . $conn->connect_error);
 }
+
+// لدعم اللغة العربية بشكل صحيح
+$conn->set_charset("utf8");
 ?>
